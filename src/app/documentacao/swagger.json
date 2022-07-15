@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Products",
+    "description": "Documentation from products api",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "paths": {
+    "/cadastrarUser": {
+      "post": {
+        "tags": ["User"],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                 "type":"object",
+                    "properties":{
+                      "fotoPerfill":{
+                        "type":"string",
+                        "format": "binary" 
+                      },
+                      "nome":{
+                        "type":"string"
+                      },
+                      "dataNasc":{
+                        "type":"string"
+                      },
+                      "genero":{
+                        "type":"string"
+                      },
+                      "email":{
+                        "type":"string"
+                      },
+                      "descGenero":{
+                        "type":"string"
+                      },
+                      "tell":{
+                        "type":"number"
+                      },
+                      "rua":{
+                        "type":"string"
+                      },
+                      "numero":{
+                        "type":"number"
+                      },
+                      "bairro":{
+                        "type":"string"
+                      },
+                      "cidade":{
+                        "type":"string"
+                      },
+                      "estado":{
+                        "type":"string"
+                      },
+                      "complemento":{
+                        "type":"string"
+                      }  
+                } 
+              }
+            }
+          }
+        },
+      "responses": {
+        "400": {
+          "description": "erro de validacao de campo"
+        },
+        "200": {
+          "description": "OK"
+        }
+      }
+      }
+    }
+  }
+}
